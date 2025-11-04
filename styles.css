@@ -1,0 +1,296 @@
+:root{
+    --color-body:#808080; --color-white:#FFFFFF; --color-grey:#AAAAAA;
+    --color-disable:#E5E5e5; --color-title:#1C3554; --color-pink:#F72585;
+    --color-orange:#FAA307; --color-in-field:#cccccc; --color-blue:#4586D6;
+    
+    --font-primary: 'Montserrat', sans-serif;
+    --font-header: 'Rubik','Montserrat', sans-serif;
+    --font-semibold: "Montserrat SemiBold", sans-serif;
+    --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+    --radius:8px;
+    --shadow: 40px 40px 57px 0px rgba(0, 0, 0, 0.1);
+}
+*{box-sizing: border-box;}
+
+html,body{padding: 0; margin: 0;}
+
+body{
+    background-color: var(--color-white);
+    font-family: var(--font-primary), var(--font-fallback);
+    font-size: 16px;
+    line-height: 1.5rem;
+}
+
+h4{
+    font-size: 2rem;
+    line-height: 1.5em;
+}
+
+h6{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+/* HEADER */
+.overlay{
+    background-color: var(--color-body);
+    width: 100%;
+    height: 440px;
+}
+.navbar{
+    width: 100%;
+    height: 120px;
+    padding: 36px 104px;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.nav__logo img{
+    height: 32px;
+    width: auto;
+}
+
+.nav__search{
+    position: relative;
+    flex: 0 0 443px;
+}
+
+.nav__search form {
+    position: relative;
+}
+
+.searchbar{
+    width: 100%;
+    height: 48px;
+    border-radius: var(--radius);
+    background-color: var(--color-body);
+    border: 1px solid var(--color-white);
+    padding: 0 16px;
+    color: var(--color-white);
+}
+
+.searchbar::placeholder{
+    opacity: 1;
+    color: var(--color-disable);
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+}
+
+.search__icon{
+    position: absolute;
+    right: 16px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+.nav__menu{
+    display: flex;
+    align-items: center;
+}
+
+.nav__menu p{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.nav__menu img{
+    width: 24px;
+    height: auto;
+    max-height: 24px;
+}
+
+.nav__text{
+    font-weight: 600;
+}
+
+.profile{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.profile p{
+    font-size: 0.875rem;
+    font-weight: 400px;
+}
+.profile__img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--color-grey);
+}
+
+/* PROFILE */
+.profile__container{
+    margin: 48px  104px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.profile__photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--color-in-field);
+}
+
+.profile__text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile__name{
+    font-family: var(--font-header);
+    font-weight: 700;
+    color: var(--color-title);
+    margin: 0;
+}
+
+.profile__description{
+    font-family: var(--font-header);
+    font-weight: 500;
+    color: var(--color-body);
+    margin: 0;
+}
+
+/* PROFILE NAVIGATION */
+.nav__list{
+    margin: 0 240px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__item{
+    margin: 0;
+    font-family: var(--font-header);
+    line-height: 1.5em;
+    font-weight: 400;
+    color: var(--color-body);
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav__item--active{
+    font-family: var(--font-header);
+    font-weight: 500;
+    color: var(--color-title);
+}
+
+.nav__item--active::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-pink);
+    border-radius: 22px;
+}
+
+/* COURSES */
+.courses{
+    padding: 40px 106px;
+}
+
+.course-card{
+    width: 295px;
+    height: 427px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+}
+
+.course-card__image-container {
+    position: relative;
+}
+
+.course-card__img{
+    width: 100%;
+    height: 208px;
+    object-fit: cover;
+    background-color: var(--color-in-field);
+    border-radius: 4px;
+    display: block;
+}
+
+.course-card__button{
+    position: absolute;
+    left: 50%; /* Центрируем по горизонтали */
+    bottom: -16px; /* Отступ от нижней границы */
+    transform: translateX(-50%);
+    background-color: var(--color-blue);
+    border-radius:var(--radius);
+    padding: 4px 24px;
+    color: var(--color-white);
+    font-size: 0.75rem;
+    line-height: 2em;
+    font-family: var(--font-semibold);
+    font-weight: 400;
+    border: none;
+}
+
+.course-card__header{
+    color: var(--color-title);
+    font-family: var(--font-header);
+    font-weight: 500;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.course-card__description{
+    font-size: 0.75rem;
+    color: var(--color-pink);
+    font-family: var(--font-semibold);
+    font-weight: 400;
+    line-height: 2em;
+    margin: 0;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.rating__img img{
+    width: 16.05px;
+    height: 16px;
+}
+
+.rating-text{
+    margin: 0;
+    color: var(--color-body);
+    font-size: 0.875rem;
+    font-family: var(--font-semibold);
+    font-weight: 400;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.strike-price{
+    color: var(--color-in-field);
+    font-family: "Raleway SemiBold", 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.real-price{
+    margin: 0;
+    font-family: var(--font-header);
+    color: var(--color-title);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
