@@ -2,6 +2,7 @@
     --color-body:#808080; --color-white:#FFFFFF; --color-grey:#AAAAAA;
     --color-disable:#E5E5e5; --color-title:#1C3554; --color-pink:#F72585;
     --color-orange:#FAA307; --color-in-field:#cccccc; --color-blue:#4586D6;
+    --color-navy:#021934;
     
     --font-primary: 'Montserrat', sans-serif;
     --font-header: 'Rubik','Montserrat', sans-serif;
@@ -199,14 +200,32 @@ h6{
 /* COURSES */
 .courses{
     padding: 40px 106px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    gap: 1rem;
 }
 
 .course-card{
-    width: 295px;
+    width: 100%;
+    max-width: 295px;
+    height: 427px;
+    border-radius: var(--radius);
+    padding: 16px;
+    transition: all 0.15s ease;
+}
+
+.active-card{
+    width: 100%;
+    max-width: 295px;
     height: 427px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 16px;
+    transition: all 0.15s ease;
+}
+
+.course-card:hover{
+    box-shadow: var(--shadow);
 }
 
 .course-card__image-container {
@@ -236,6 +255,8 @@ h6{
     font-family: var(--font-semibold);
     font-weight: 400;
     border: none;
+    /* white-space: nowrap; */
+    width: max-content;
 }
 
 .course-card__header{
@@ -293,4 +314,80 @@ h6{
     color: var(--color-title);
     font-weight: 500;
     font-size: 1.5rem;
+}
+
+/* FOOTER */
+.footer{
+    margin: 160px 40px 40px 40px;
+    padding: 80px 103px 40px 68px;
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.footer-logo{
+    height: 32px;
+    width: auto;
+}
+
+.upper-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper-footer__main{
+    max-width: 500px;
+    align-self: flex-start;
+}
+
+.upper-footer__text{
+    font-weight: 400;
+}
+
+.upper-footer__links{
+    align-self: flex-end;
+    display: flex;
+    gap: 110px;
+    justify-content: space-between;
+}
+
+.links__header{
+    font-family: var(--font-header);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.footer-link{
+    font-family: var(--font-semibold);
+    line-height: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.lower-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-bottom{
+    align-self: flex-start;
+    display: flex;
+    gap: 40px;
+}
+
+.menu-bottom__link{
+    line-height: 1.6875rem;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.footer-rights{
+    line-height: 1.6875rem;
+    margin: 0;
+    align-self: flex-end;
 }
