@@ -14,7 +14,7 @@
 }
 *{box-sizing: border-box;}
 
-html,body{padding: 0; margin: 0;}
+html,body{padding: 0; margin: 0;width: 100%;}
 
 body{
     background-color: var(--color-white);
@@ -33,11 +33,18 @@ h6{
     line-height: 1.5em;
 }
 /* HEADER */
+header{
+    width: 100%;
+}
+
 .overlay{
     background-color: var(--color-body);
     width: 100%;
     height: 440px;
+
+    box-sizing: border-box;
 }
+
 .navbar{
     width: 100%;
     height: 120px;
@@ -47,6 +54,8 @@ h6{
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+
+    box-sizing: border-box;
 }
 
 .nav__logo img{
@@ -56,7 +65,8 @@ h6{
 
 .nav__search{
     position: relative;
-    flex: 0 0 443px;
+    flex: 0 1 443px;
+    min-width: 225px;
 }
 
 .nav__search form {
@@ -107,6 +117,7 @@ h6{
 
 .nav__text{
     font-weight: 600;
+    margin: 0;
 }
 
 .profile{
@@ -390,4 +401,68 @@ h6{
     line-height: 1.6875rem;
     margin: 0;
     align-self: flex-end;
+}
+
+@media (max-width:1024px){
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px 24px;
+        gap: 16px;
+    }
+
+     .nav__logo {
+        order: 1;
+    }
+    
+    .nav__search {
+        order: 2;
+        flex: 1 1 auto;
+        min-width: 225px;
+    }
+    .nav__menu {
+        order: 3;
+        margin-right: auto;
+    }
+    
+    .nav__text {
+        order: 4;
+    }
+    
+    .profile {
+        order: 5;
+    }
+}
+
+@media (max-width: 768px){
+    .navbar {
+        padding: 16px 20px;
+        gap: 12px;
+    }
+    .nav__logo {
+        order: 1;
+    }
+    
+    .nav__search {
+        order: 2;
+        flex: 1 1 100%;
+        margin-bottom: 8px;
+    }
+    
+    .nav__menu {
+        order: 3;
+        margin-right: 0;
+    }
+    .nav__text {
+        order: 4;
+        margin: 0 auto;
+    }
+    
+    .profile {
+        order: 5;
+    }
+    
+    .profile p {
+        display: none; /* Скрываем email на мобильных */
+    }
 }
