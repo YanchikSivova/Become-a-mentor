@@ -385,7 +385,7 @@ header{
 }
 
 .upper-footer__main{
-    max-width: 500px;
+    max-width: min(500px, 100%);
     /* max-width: min(500px, 100%); */
     align-self: flex-start;
 }
@@ -518,9 +518,14 @@ header{
 
     .upper-footer__links{
         flex-direction: row;
-        gap: clamp(40px, 12vw,110px);
+        gap: clamp(16px, 6vw,110px);
     }
     .links-list{
         display: none;
+    }
+
+    .lower-footer{
+        flex-wrap: wrap;
+        gap: 16px;
     }
 }
