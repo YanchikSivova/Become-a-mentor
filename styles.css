@@ -175,37 +175,64 @@ header{
 .nav__list{
     margin: 0 240px;
     list-style: none;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки равной ширины */
+    align-items: center;
+    justify-items: center;
 }
 
 .nav__item{
     margin: 0;
     font-family: var(--font-header);
     line-height: 1.5em;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-variation-settings: 'wght' 400;
+
     color: var(--color-body);
     padding-bottom: 8px;
-    transition: color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    cursor: pointer;
+
+}
+
+.nav__item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: var(--color-pink);
+    border-radius: 22px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.nav__item:hover{
+    color: var(--color-title);
+    transform: translateY(-1px);
 }
 
 .nav__item--active{
-    font-family: var(--font-header);
-    font-weight: 500;
+    /* font-weight: 500; */
+    font-variation-settings: 'wght' 500;
+
     color: var(--color-title);
 }
 
 .nav__item--active::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    height: 5px;
-    background-color: var(--color-pink);
-    border-radius: 22px;
+    left: 0;
+    transform: translateX(0);
+}
+
+.nav__item--active:hover{
+    transform: translateY(-1px);
 }
 
 /* COURSES */
@@ -411,27 +438,27 @@ header{
         gap: 16px;
     }
 
-     .nav__logo {
+     /* .nav__logo {
         order: 1;
-    }
+    } */
     
     .nav__search {
-        order: 2;
+        /* order: 2; */
         flex: 1 1 auto;
         min-width: 225px;
     }
     .nav__menu {
-        order: 3;
+        /* order: 3; */
         margin-right: auto;
     }
     
-    .nav__text {
+    /* .nav__text {
         order: 4;
     }
     
     .profile {
         order: 5;
-    }
+    } */
 }
 
 @media (max-width: 768px){
@@ -439,28 +466,28 @@ header{
         padding: 16px 20px;
         gap: 12px;
     }
-    .nav__logo {
+    /* .nav__logo {
         order: 1;
-    }
+    } */
     
     .nav__search {
-        order: 2;
+        /* order: 2; */
         flex: 1 1 100%;
         margin-bottom: 8px;
     }
     
     .nav__menu {
-        order: 3;
+        /* order: 3; */
         margin-right: 0;
     }
     .nav__text {
-        order: 4;
+        /* order: 4; */
         margin: 0 auto;
     }
     
-    .profile {
+    /* .profile {
         order: 5;
-    }
+    } */
     
     .profile p {
         display: none; /* Скрываем email на мобильных */
