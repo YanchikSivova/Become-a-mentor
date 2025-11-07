@@ -48,12 +48,14 @@ header{
 .navbar{
     width: 100%;
     height: 120px;
-    padding: 36px 104px;
+    /* padding: 36px 104px; */
+    padding: clamp(16px, 2.5vw, 36px) clamp(20px, 8vw, 104px);
     color: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    /* gap: 24px; */
+    gap: clamp(12px, 2vw ,24px);
 
     box-sizing: border-box;
 }
@@ -107,6 +109,7 @@ header{
 .nav__menu p{
     font-size: 1rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .nav__menu img{
@@ -356,14 +359,17 @@ header{
 
 /* FOOTER */
 .footer{
-    margin: 160px 40px 40px 40px;
-    padding: 80px 103px 40px 68px;
+    /* margin: 160px 40px 40px 40px; */
+    margin: clamp(80px, 12vw, 160px) clamp(20px, 3vw, 40px) clamp(20px, 3vw, 40px) clamp(20px, 3vw, 40px);
+    /* padding: 80px 103px 40px 68px; */
+    padding: clamp(40px, 6vw, 80px) clamp(60px, 8vw,103px) clamp(20px, 3vw, 40px) clamp(38px, 5vw, 68px);
     background-color: var(--color-navy);
     color: var(--color-white);
     border-radius: var(--radius);
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    /* gap: 80px; */
+    gap: clamp(16px, 4vw, 80px);
 }
 
 .footer-logo{
@@ -373,11 +379,14 @@ header{
 
 .upper-footer{
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
+    gap: 20px;
 }
 
 .upper-footer__main{
     max-width: 500px;
+    /* max-width: min(500px, 100%); */
     align-self: flex-start;
 }
 
@@ -388,7 +397,8 @@ header{
 .upper-footer__links{
     align-self: flex-end;
     display: flex;
-    gap: 110px;
+    /* gap: 110px; */
+    gap: clamp(86px, 8vw,110px);
     justify-content: space-between;
 }
 
@@ -428,14 +438,14 @@ header{
     line-height: 1.6875rem;
     margin: 0;
     align-self: flex-end;
-}
+}   
 
 @media (max-width:1024px){
     .navbar {
         flex-wrap: wrap;
         height: auto;
-        padding: 20px 24px;
-        gap: 16px;
+        /* padding: 20px 24px; */
+        /* gap: 16px; */
     }
 
      /* .nav__logo {
@@ -459,13 +469,21 @@ header{
     .profile {
         order: 5;
     } */
+
+    .upper-footer__links{
+        flex-direction: column;
+        gap:12px;
+    }
+    .links-list{
+        display: none;
+    }
 }
 
 @media (max-width: 768px){
-    .navbar {
+    /* .navbar {
         padding: 16px 20px;
         gap: 12px;
-    }
+    } */
     /* .nav__logo {
         order: 1;
     } */
@@ -491,5 +509,18 @@ header{
     
     .profile p {
         display: none; /* Скрываем email на мобильных */
+    }
+
+    .upper-footer{
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .upper-footer__links{
+        flex-direction: row;
+        gap: clamp(40px, 12vw,110px);
+    }
+    .links-list{
+        display: none;
     }
 }
