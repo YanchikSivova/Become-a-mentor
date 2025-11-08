@@ -362,7 +362,7 @@ header{
     /* margin: 160px 40px 40px 40px; */
     margin: clamp(80px, 12vw, 160px) clamp(20px, 3vw, 40px) clamp(20px, 3vw, 40px) clamp(20px, 3vw, 40px);
     /* padding: 80px 103px 40px 68px; */
-    padding: clamp(40px, 6vw, 80px) clamp(60px, 8vw,103px) clamp(20px, 3vw, 40px) clamp(38px, 5vw, 68px);
+    padding: clamp(40px, 6vw, 80px) clamp(45px, 8vw,103px) clamp(20px, 3vw, 40px) clamp(38px, 5vw, 68px);
     background-color: var(--color-navy);
     color: var(--color-white);
     border-radius: var(--radius);
@@ -402,12 +402,37 @@ header{
     justify-content: space-between;
 }
 
+.links__header-wrapper{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.links__toggle{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.links__toggle.rotated{
+    transform: rotate(180deg);
+}
+
 .links__header{
     font-family: var(--font-header);
     font-weight: 400;
-    font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 1.5rem;
+}
+
+.links-list{
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
 }
 
 .footer-link{
@@ -444,73 +469,62 @@ header{
     .navbar {
         flex-wrap: wrap;
         height: auto;
-        /* padding: 20px 24px; */
-        /* gap: 16px; */
     }
-
-     /* .nav__logo {
-        order: 1;
-    } */
     
     .nav__search {
-        /* order: 2; */
         flex: 1 1 auto;
         min-width: 225px;
     }
     .nav__menu {
-        /* order: 3; */
         margin-right: auto;
     }
     
-    /* .nav__text {
-        order: 4;
+    .profile p {
+        display: none;
     }
     
-    .profile {
-        order: 5;
-    } */
-
     .upper-footer__links{
         flex-direction: column;
         gap:12px;
     }
     .links-list{
         display: none;
+        max-height: 0;
+        opacity: 0;
+        margin-top: 1rem;
+    }
+
+    .links-list.active {
+        display: block; /* Показываем при активации */
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    .links__header{
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+
+    .links__toggle {
+        display: block;
+        font-size: 1.25rem;
     }
 }
 
 @media (max-width: 768px){
-    /* .navbar {
-        padding: 16px 20px;
-        gap: 12px;
-    } */
-    /* .nav__logo {
-        order: 1;
-    } */
     
     .nav__search {
-        /* order: 2; */
         flex: 1 1 100%;
         margin-bottom: 8px;
     }
     
     .nav__menu {
-        /* order: 3; */
         margin-right: 0;
     }
     .nav__text {
-        /* order: 4; */
         margin: 0 auto;
     }
     
-    /* .profile {
-        order: 5;
-    } */
-    
-    .profile p {
-        display: none; /* Скрываем email на мобильных */
-    }
-
     .upper-footer{
         flex-wrap: wrap;
         gap: 8px;
