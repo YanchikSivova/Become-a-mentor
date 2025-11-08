@@ -485,6 +485,7 @@ header{
     }
     
     .upper-footer__links{
+        align-self: flex-start;
         flex-direction: column;
         gap:12px;
     }
@@ -504,11 +505,21 @@ header{
     .links__header{
         font-size: 1.25rem;
         margin-bottom: 0;
+        padding-right: 28px;
     }
 
     .links__toggle {
         display: block;
         font-size: 1.25rem;
+    }
+    .links__header-wrapper{
+        display: grid;
+        grid-template-columns: auto 1fr; /* Заголовок слева, кнопка справа */
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+        padding-bottom: 8px;
+        /* gap: 16px; */
     }
 }
 
@@ -535,8 +546,13 @@ header{
         flex-direction: row;
         gap: clamp(16px, 6vw,110px);
     }
+
     .links-list{
         display: none;
+    }
+
+    .links__header{
+        padding-right: 10px;
     }
 
     .lower-footer{
