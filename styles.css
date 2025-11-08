@@ -416,7 +416,8 @@ header{
     background: none;
     border: none;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    padding: 0;
+    transition: transform 0.15s ease;
 }
 
 .links__toggle.rotated{
