@@ -37,6 +37,11 @@ body {
     line-height: 1.5rem;
 }
 
+h2{
+    font-size: 4rem;
+    line-height: 5.5rem;
+}
+
 h3{
     font-size: 3rem;
     line-height: 4rem;
@@ -262,11 +267,85 @@ header {
     color: var(--color-white);
 }
 
+/* ШАПОЧКА */
+.hero{
+    margin-inline: 40px;
+    width: calc(100%-80px);
+    height: 748px;
+    padding: 88px 64px;
+    border-radius: var(--radius);
+    background-color: var(--color-navy);
+
+    display: flex;
+}
+
+.hero__header{
+    font-family: var(--font-header);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.hero__text{
+    color: var(--color-white);
+    line-height: 1.6875rem;
+}
+
+.hero__search{
+    position: relative;
+    flex: 0 1 610px;
+    max-width: 610px
+}
+
+.hero__searchbar{
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-white);
+    color: var(--color-navy);
+    padding: 12px 16px;
+    padding-left: 56px;
+    border-radius: var(--radius);
+    box-sizing: border-box;
+    font-size: 1.25rem;
+}
+
+.hero__searchbar::placeholder{
+    opacity: 1;
+    color: var(--color-body);
+    font-size: 1rem;
+    line-height: 1.6875rem;
+}
+
+.hero-search__icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+.hero__search-button{
+    border-radius: var(--radius);
+    background-color: var(--color-pink);
+    border: none;
+    padding: 12px 32px;
+    color: var(--color-white);
+    font-family: var(--font-semibold);
+    line-height: 2rem;
+
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 /* COURSES */
 .courses__header{
     font-family: var(--font-header);
     color: var(--color-title);
     text-align: center;
+    
 }
 
 .nav__list{
