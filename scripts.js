@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     initLogin();    //Вход через логин
+    initSignup();   //Регистрация
     initNavigation();   //Навигация в карточках
     initCards();    //Карточки
     initFooter();   //Футер
@@ -33,6 +34,39 @@ function initLogin(){
             accountButtons.style.display = 'none';
             profile.style.display = 'flex';
             loginDlg.close('success');
+        }
+    })
+};
+
+//Регистрация
+function initSignup(){
+    const signupDlg = document.querySelector(".signupDialog");
+    if(!signupDlg) return;
+    const openSignupBtn = document.getElementById('openSignupDialog');
+    const closeSignupBtn = document.getElementById('closeSignupDialog');
+    const signupForm = document.getElementById('signupDialogForm');
+    const accountButtons = document.querySelector('.account-buttons');
+    const profile = document.querySelector('.profile');
+    let lastActive = null;
+    
+    openSignupBtn.addEventListener('click', ()=>{
+        lastActive = document.activeElement;
+        signupDlg.showModal();
+    });
+    
+    closeSignupBtn.addEventListener('click', ()=> signupDlg.close('cancel'));
+    
+    signupForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const formData = new FormData(signupForm)
+        let name = formData.get('name');
+        let surname = formData.get('surname');
+        let email = formData.get('email');
+        let password = formData.get('password');
+        if(name && surname && email && password){
+            accountButtons.style.display = 'none';
+            profile.style.display = 'flex';
+            signupDlg.close('success');
         }
     })
 };
