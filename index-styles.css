@@ -10,6 +10,7 @@
     --color-in-field: #cccccc;
     --color-blue: #4586D6;
     --color-navy: #021934;
+    --color-overlay:#000000;
 
     --font-primary: 'Montserrat', sans-serif;
     --font-header: 'Rubik', 'Montserrat', sans-serif;
@@ -622,6 +623,96 @@ header {
 
     display: block;
     margin: 0 auto;
+}
+
+.categories__header{
+    color: var(--color-title);
+    font-family: var(--font-header);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 56px;
+    margin-left: clamp(50px,7vw,106px);;
+}
+
+.categories__cards{
+    padding-inline: clamp(50px,7vw,104px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min(295px, 85vw));
+    gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.category__card{
+    width: 100%;
+    max-width: min(295px, 90vw);
+    aspect-ratio: 295 / 350;
+    border-radius: var(--radius);
+    background-color: var(--color-in-field);
+    position: relative;
+    justify-self: center;
+    align-self: center;
+}
+
+.category__card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    background-color: var(--color-overlay);
+    opacity: 50%;
+    display: block;
+}
+
+.category__card-text{
+    margin: 0;
+    line-height: 2rem;
+    font-family: var(--font-header);
+    color: var(--color-white);
+    font-weight: 500;
+    z-index: 1;
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+
+/* ICONS */
+.icon-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-inline: 167px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.icon img{
+    width: 64px;
+    height: 64px;
+}
+
+.icon-header{
+    margin: 0;
+    color: var(--color-title);
+    font-family: var(--font-header);
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon-text{
+    color: var(--color-title);
+    font-family: var(--font-header);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+    margin: 0;
 }
 
 /* FOOTER */
