@@ -15,432 +15,451 @@
 <body>
     <header>
         <div class="overlay">
-            <nav class="navbar">
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
                 <div class="nav__logo">
-                    <a href="index.html">
-                        <img src="assets/logo.svg" style="color: white;">
+                    <a href="index.html" aria-label="Go to homepage">
+                        <img src="assets/logo.svg" style="color: white;" alt="Company logo">
                     </a>
                 </div>
                 <div class="nav__search">
-                    <form>
+                    <form role="search" aria-label="Site search">
                         <input class="searchbar" type="search" placeholder="Search bar">
-                        <input type="image" name="submit" class="search__icon" src="assets/search.svg">
+                        <input type="image" name="submit" class="search__icon" src="assets/search.svg"
+                            aria-label="Search">
                     </form>
                 </div>
-                <div class="nav__menu">
+                <div class="nav__menu" role="button" aria-expanded="false" aria-haspopup="true"
+                    aria-label='Category menu'>
                     <p>Category</p>
-                    <img src="assets/arrow-drop-down.svg">
+                    <img src="assets/arrow-drop-down.svg" alt="" role="presentation">
                 </div>
                 <p class="nav__text">Become a Mentor</p>
-                <div class="profile">
-                    <img src="assets/keyboard-arrow-down.svg">
-                    <img class="profile__img" src="/">
+                <div class="profile" role="button" aria-expanded="false" aria-haspopup="true" aria-label="User menu">
+                    <img src="assets/keyboard-arrow-down.svg" alt="" role="presentation">
+                    <img class="profile__img" src="/" alt="Profile picture">
                     <p>Romadhon@gmail.com</p>
                 </div>
             </nav>
         </div>
     </header>
-    <main>
-        <div class="profile__container">
-            <img class="profile__photo" src="/">
-            <div class="profile__text-container">
-                <h4 class="profile__name">Romadhona Syarifuddin</h4>
-                <p class="profile__description">Full Stack Web Designer</p>
+    <main id="main-content" role="main">
+
+        <section aria-labelledby="profile-heading">
+            <div class="profile__container">
+                <img class="profile__photo" src="/" alt="Profile photo">
+                <div class="profile__text-container">
+                    <h4 class="profile__name">Romadhona Syarifuddin</h4>
+                    <p class="profile__description">Full Stack Web Designer</p>
+                </div>
             </div>
-        </div>
-        <nav>
-            <div class="nav__list">
-                <h4 class="nav__item nav__item--active">My courses</h4>
-                <h4 class="nav__item">Wishlist</h4>
-                <h4 class="nav__item">My certificate</h4>
+        </section>
+
+        <nav aria-label="Profile sections">
+            <div class="nav__list" role="tablist">
+                <h4 class="nav__item nav__item--active" role="button" aria-selected="true"
+                    aria-controls="my-courses-section">My courses</h4>
+                <h4 class="nav__item" role="button" aria-selected="false" aria-controls="my-wishlist-section">Wishlist
+                </h4>
+                <h4 class="nav__item" role="button" aria-selected="false" aria-controls="my-certificate-section">My
+                    certificate</h4>
             </div>
         </nav>
-        <div class="courses">
-            <!-- ПЕРВАЯ -->
-            <div class="course-card active-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">UI/UX Design</button>
-                </div>
-                <p class="course-card__header">Interpersonal Skills - Work Better With Others!</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$384</h6>
-                </div>
-            </div>
-            <!-- ВТОРАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">Web Developer</button>
-                </div>
-                <p class="course-card__header">How to become an Expert Web Developer</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$735</h6>
-                </div>
-            </div>
-            <!-- ТРЕТЬЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">UX Research</button>
-                </div>
-                <p class="course-card__header">User Experience Design</br>Essentials</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$826</h6>
-                </div>
-            </div>
-            <!-- ЧЕТВЕРТАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">3D Design</button>
-                </div>
-                <p class="course-card__header">Creating 3D Modelling in</br>Blender </p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$710</h6>
-                </div>
-            </div>
 
-            <!-- ПЕРВАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">UI/UX Design</button>
-                </div>
-                <p class="course-card__header">Interpersonal Skills - Work Better With Others!</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$384</h6>
-                </div>
-            </div>
-            <!-- ВТОРАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">Web Developer</button>
-                </div>
-                <p class="course-card__header">How to become an Expert Web Developer</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$735</h6>
-                </div>
-            </div>
-            <!-- ТРЕТЬЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">UX Research</button>
-                </div>
-                <p class="course-card__header">User Experience Design</br>Essentials</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$826</h6>
-                </div>
-            </div>
-            <!-- ЧЕТВЕРТАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">3D Design</button>
-                </div>
-                <p class="course-card__header">Creating 3D Modelling in</br>Blender </p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$710</h6>
-                </div>
-            </div>
+        <section id="my-courses-section" role="tabpanel">
+            <div class="courses">
 
-            <!-- ПЕРВАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">UI/UX Design</button>
-                </div>
-                <p class="course-card__header">Interpersonal Skills - Work Better With Others!</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
+                <!-- ПЕРВАЯ -->
+                <article class="course-card active-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">UI/UX Design</button>
                     </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$384</h6>
-                </div>
-            </div>
-            <!-- ВТОРАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">Web Developer</button>
-                </div>
-                <p class="course-card__header">How to become an Expert Web Developer</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
+                    <p class="course-card__header">Interpersonal Skills - Work Better With Others!</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
                     </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$735</h6>
-                </div>
-            </div>
-            <!-- ТРЕТЬЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">UX Research</button>
-                </div>
-                <p class="course-card__header">User Experience Design</br>Essentials</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Discounted price $384">$384</h6>
                     </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$826</h6>
-                </div>
-            </div>
-            <!-- ЧЕТВЕРТАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">3D Design</button>
-                </div>
-                <p class="course-card__header">Creating 3D Modelling in</br>Blender </p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$710</h6>
-                </div>
-            </div>
+                </article>
 
-            <!-- ПЕРВАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">UI/UX Design</button>
-                </div>
-                <p class="course-card__header">Interpersonal Skills - Work Better With Others!</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
+                <!-- ВТОРАЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">Web Developer</button>
                     </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$384</h6>
-                </div>
-            </div>
-            <!-- ВТОРАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">Web Developer</button>
-                </div>
-                <p class="course-card__header">How to become an Expert Web Developer</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
+                    <p class="course-card__header">How to become an Expert Web Developer</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 starts">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
                     </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$735</h6>
-                </div>
-            </div>
-            <!-- ТРЕТЬЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">UX Research</button>
-                </div>
-                <p class="course-card__header">User Experience Design</br>Essentials</p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $735">$735</h6>
                     </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$826</h6>
-                </div>
-            </div>
-            <!-- ЧЕТВЕРТАЯ -->
-            <div class="course-card">
-                <div class="course-card__image-container">
-                    <img class="course-card__img" src="/">
-                    <button type="button" class="course-card__button">3D Design</button>
-                </div>
-                <p class="course-card__header">Creating 3D Modelling in</br>Blender </p>
-                <p class="course-card__description">Tanah Air Team</p>
-                <div class="rating">
-                    <div class="rating-img">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                        <img src="assets/rating.svg">
-                    </div>
-                    <p class="rating-text">(2078)</p>
-                </div>
-                <div class="price">
-                    <s class="strike-price">$640</s>
-                    <h6 class="real-price">$710</h6>
-                </div>
-            </div>
+                </article>
 
-        </div>
+                <!-- ТРЕТЬЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">UX Research</button>
+                    </div>
+                    <p class="course-card__header">User Experience Design</br>Essentials</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $826">$826</h6>
+                    </div>
+                </article>
+
+                <!-- ЧЕТВЕРТАЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">3D Design</button>
+                    </div>
+                    <p class="course-card__header">Creating 3D Modelling in</br>Blender </p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $710">$710</h6>
+                    </div>
+                </article>
+
+                <!-- ПЕРВАЯ -->
+                <article class="course-card active-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">UI/UX Design</button>
+                    </div>
+                    <p class="course-card__header">Interpersonal Skills - Work Better With Others!</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Discounted price $384">$384</h6>
+                    </div>
+                </article>
+
+                <!-- ВТОРАЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">Web Developer</button>
+                    </div>
+                    <p class="course-card__header">How to become an Expert Web Developer</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 starts">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $735">$735</h6>
+                    </div>
+                </article>
+
+                <!-- ТРЕТЬЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">UX Research</button>
+                    </div>
+                    <p class="course-card__header">User Experience Design</br>Essentials</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $826">$826</h6>
+                    </div>
+                </article>
+
+                <!-- ЧЕТВЕРТАЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">3D Design</button>
+                    </div>
+                    <p class="course-card__header">Creating 3D Modelling in</br>Blender </p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $710">$710</h6>
+                    </div>
+                </article>
+
+                <!-- ПЕРВАЯ -->
+                <article class="course-card active-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">UI/UX Design</button>
+                    </div>
+                    <p class="course-card__header">Interpersonal Skills - Work Better With Others!</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Discounted price $384">$384</h6>
+                    </div>
+                </article>
+                <!-- ВТОРАЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">Web Developer</button>
+                    </div>
+                    <p class="course-card__header">How to become an Expert Web Developer</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 starts">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $735">$735</h6>
+                    </div>
+                </article>
+                <!-- ТРЕТЬЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">UX Research</button>
+                    </div>
+                    <p class="course-card__header">User Experience Design</br>Essentials</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $826">$826</h6>
+                    </div>
+                </article>
+                <!-- ЧЕТВЕРТАЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">3D Design</button>
+                    </div>
+                    <p class="course-card__header">Creating 3D Modelling in</br>Blender </p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $710">$710</h6>
+                    </div>
+                </article>
+
+                <!-- ПЕРВАЯ -->
+                <article class="course-card active-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">UI/UX Design</button>
+                    </div>
+                    <p class="course-card__header">Interpersonal Skills - Work Better With Others!</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Discounted price $384">$384</h6>
+                    </div>
+                </article>
+                <!-- ВТОРАЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">Web Developer</button>
+                    </div>
+                    <p class="course-card__header">How to become an Expert Web Developer</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 starts">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $735">$735</h6>
+                    </div>
+                </article>
+                <!-- ТРЕТЬЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">UX Research</button>
+                    </div>
+                    <p class="course-card__header">User Experience Design</br>Essentials</p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $826">$826</h6>
+                    </div>
+                </article>
+                <!-- ЧЕТВЕРТАЯ -->
+                <article class="course-card" role="listitem">
+                    <div class="course-card__image-container">
+                        <img class="course-card__img" src="/" alt="Course cover image">
+                        <button type="button" class="course-card__button">3D Design</button>
+                    </div>
+                    <p class="course-card__header">Creating 3D Modelling in</br>Blender </p>
+                    <p class="course-card__description">Tanah Air Team</p>
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <div class="rating-img">
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                            <img src="assets/rating.svg" alt="Star rating">>
+                        </div>
+                        <p class="rating-text">(2078)</p>
+                    </div>
+                    <div class="price">
+                        <s class="strike-price" aria-label="Original price $640">$640</s>
+                        <h6 class="real-price" aria-label="Current price $710">$710</h6>
+                    </div>
+                </article>
+
+            </div>
+        </section>
 
         <!-- FOOTER -->
-        <footer class="footer">
+        <footer class="footer" role="contentinfo">
 
             <div class="upper-footer">
                 <div class="upper-footer__main">
-                    <img class="footer-logo" src="assets/logo.svg">
+                    <img class="footer-logo" src="assets/logo.svg" alt="Company logo">
                     <p class="upper-footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
                         tristique placerat eleifend aliquam pellentesque facilisis ultrices. Imperdiet mus urna egestas
                         at tellus. </p>
                 </div>
-                <div class="upper-footer__links">
+                <nav class="upper-footer__links" aria-label="Footer navigation">
                     <div class="links">
                         <div class="links__header-wrapper">
                             <button class="links__toggle" type="button">
@@ -481,14 +500,14 @@
                             <p class="footer-link">Code of Conduct</p>
                         </div>
                     </div>
-                </div>
+                </nav>
             </div>
 
             <div class="lower-footer">
-                <div class="menu-bottom">
+                <nav class="menu-bottom" aria-label="Legal links">
                     <a class="menu-bottom__link" href="/">Privacy Policy</a>
                     <a class="menu-bottom__link" href="/">Terms and Condition</a>
-                </div>
+                </nav>
                 <p class="footer-rights">@2020 TanahAir Studio. All rights reserved.</p>
             </div>
         </footer>
