@@ -213,12 +213,16 @@ header {
     /* line-height: 1.5em; */
     /* font-weight: 400; */
     font-variation-settings: 'wght' 400;
+    font-size: 2rem;
+    line-height: 1.5em;
     white-space: nowrap;
     color: var(--color-body);
     padding-bottom: 8px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     cursor: pointer;
+    border: none;
+    background:none;
 
 }
 
